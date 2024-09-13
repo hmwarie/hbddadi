@@ -1,13 +1,8 @@
-.hbddadi {
-    color: #FFF;
-    text-align: center;
-    font-family: 'Montserrat';
-    font-size: 4.5rem;
-    font-weight: 600;
-    line-height: normal;
-
+h1 {
+    font-size: 50px;
+    margin-bottom: 0px;
+    font-family: 'Inter';
     overflow: hidden;
-    border-right: .15em solid white;
     white-space: nowrap;
     margin: 20 auto;
     letter-spacing: .05em;
@@ -23,43 +18,18 @@
       
     @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: white; }
+    50% { border-color: black; }
     }
     
-    .word {
-        animation: color-animation 4s linear infinite;
-    }
+    .float {
+        animation: floatUpDown 3s infinite alternate;
+      }
     
-    .word-1 {
-        --color-1: #DF8453;
-        --color-2: #3D8DAE;
-        --color-3: #E4A9A8;
-    }
-     
-    .word-2 {
-        --color-1: #DBAD4A;
-        --color-2: #ACCFCB;
-        --color-3: #17494D;
-    }
-    
-    .word-3 {
-        --color-1: #ACCFCB;
-        --color-2: #E4A9A8;
-        --color-3: #ACCFCB;
-    }
-    
-    .word-4 {
-        --color-1: #3D8DAE;
-        --color-2: #DF8453;
-        --color-3: #E4A9A8;
-    }
-    
-    @keyframes color-animation {
-        0%    {color: var(--color-1)}
-        32%   {color: var(--color-1)}
-        33%   {color: var(--color-2)}
-        65%   {color: var(--color-2)}
-        66%   {color: var(--color-3)}
-        99%   {color: var(--color-3)}
-        100%  {color: var(--color-1)}
-    }
+      @keyframes floatUpDown {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
